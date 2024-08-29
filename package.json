@@ -1,5 +1,6 @@
 {
   "name": "lwa-sqs",
+  "description": "An AWS CDK all to test AWS Lambda Web Adapter works with SQS Batch Item Failure Reporting",
   "scripts": {
     "build": "npx projen build",
     "bundle": "npx projen bundle",
@@ -24,7 +25,10 @@
     "projen": "npx projen"
   },
   "devDependencies": {
+    "@types/aws-lambda": "^8",
+    "@types/express": "^4",
     "@types/jest": "^29.5.12",
+    "@types/morgan": "^1",
     "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "^7",
     "@typescript-eslint/parser": "^7",
@@ -41,8 +45,13 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
+    "@aws-lambda-powertools/logger": "^2.7.0",
+    "@aws-lambda-powertools/tracer": "^2.7.0",
     "aws-cdk-lib": "^2.1.0",
-    "constructs": "^10.0.5"
+    "aws-xray-sdk": "^3.9.0",
+    "constructs": "^10.0.5",
+    "express": "^4",
+    "morgan": "^1"
   },
   "license": "Apache-2.0",
   "publishConfig": {
